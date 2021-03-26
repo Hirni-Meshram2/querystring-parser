@@ -155,13 +155,13 @@ class BuildUrl(unittest.TestCase):
 
     def test_build(self):
         result = build(self.request_data)
-        self.assertEquals(parse(result), self.request_data)
+        self.assertEqual(parse(result), self.request_data)
 
     def test_end_to_end(self):
         self.maxDiff = None
         querystring = build(self.request_data)
         result = parse(querystring)
-        self.assertEquals(result, self.request_data)
+        self.assertEqual(result, self.request_data)
 
 
 class BuilderAndParser(unittest.TestCase):
@@ -171,7 +171,7 @@ class BuilderAndParser(unittest.TestCase):
     def test_end_to_end(self):
         parsed = parse('a[]=1&a[]=2')
         result = build(parsed)
-        self.assertEquals(result, "a[]=1&a[]=2")
+        self.assertEqual(result, "a[]=1&a[]=2")
 
 
 class NormalizedParse(unittest.TestCase):
