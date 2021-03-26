@@ -3,7 +3,7 @@ arch:
   - amd64
   - arm64
 python:
-  - "3.3"
+  - "2.7"
   #- "3.8"
 install:
   - python setup.py install
